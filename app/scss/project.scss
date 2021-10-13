@@ -1,0 +1,58 @@
+// mixin----------------------------------------
+@import './mixin';
+// html-----------------------------------------
+@import './globals';
+// nav bar ---------------------------------------
+@import './navbar';
+
+// project ------------------------------------------
+main {
+    margin: 0;
+    width: 100%;
+}
+
+.projects {
+    margin: 10% 0;
+
+    .projects__items {
+        .row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 49px;
+        }
+    }
+
+    .projects__content {
+        border-radius: 10px;
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, .5);
+        background-color: rgba(255, 255, 255, .1);
+        text-align: center;
+        transition: 400ms ease-in-out;
+
+        img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+
+        a {
+            @include hyperlink();
+            font-size: 1.2rem;
+            padding: 1em;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            text-align: center;
+            background-color: rgba(0, 0, 0, .5);
+            width: 150px;
+            padding: 7px;
+            border-radius: 30px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .projects__content:hover {
+        box-shadow: 30px 30px 50px rgba(0, 0, 0, .7);
+    }
+}
